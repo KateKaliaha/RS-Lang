@@ -1,0 +1,138 @@
+.card {
+  width: calc(100% - 40px);
+  box-sizing: border-box;
+  border: 5px solid white;
+  padding: 10px;
+  display: flex;
+  gap: 20px;
+  justify-content: flex-start;
+  max-width: 860px;
+  box-shadow: rgb(0 0 0 / 50%) 0px 0px 10px;
+  border-radius: 10px;
+  color: $colorFont;
+  font-family: $textFont;
+  background-color: white;
+  margin: 0 20px;
+  transition: 0.3s;
+}
+
+.card-word-image {
+  width: 375px;
+  height: 250px;
+  border-radius: 10px;
+  box-shadow: rgb(0 0 0 / 10%) 0px 0px 10px;
+  align-self: center;
+}
+
+.card-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.card-word,
+.card-meaning-wrapper,
+.card-exapmle-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.word {
+  font-family: $headerFont;
+  font-size: 24px;
+  margin-right: 20px;
+}
+
+.audio-btn {
+  height: 40px;
+  width: 40px;
+  margin-right: 40px;
+  background-image: url(../assets/img/audio-icon.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  transition: 0.3s;
+}
+
+.audio-btn:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.auth-users-btns{
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.difficult-btn,
+.learned-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgb(0 0 0 / 15%) 0px 0px 10px;
+  border-radius: 10px;
+  background-color: white;
+  font-family: $headerFont;
+  font-size: 20px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.difficult-btn:hover,
+.learned-btn:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.difficult-btn-active {
+  box-shadow: rgb(107 83 255 / 100%) 0px 0px 15px;
+  background-color: rgb(255, 68, 43);
+}
+
+.learned-btn-active {
+  box-shadow: rgb(107 83 255 / 100%) 0px 0px 15px;
+  background-color: rgb(0, 204, 255);
+}
+
+.hidden {
+  display: none;
+}
+
+.progress {
+  display: flex;
+  justify-content: space-around;
+  font-family: $headerFont;
+  font-size: 16px;
+}
+
+.progress span {
+  margin-left: 10px;
+}
+
+.progress-attempts {
+  color: rgb(0, 204, 255);
+}
+
+.progress-wrong {
+  color: rgb(255, 0, 0);
+}
+
+.progress-correct {
+  color: rgb(0, 255, 0);
+}
+
+@media (max-width: 999px) {
+  .card-word-image {
+    width: 300px;
+    height: 200px;
+  }
+
+  .card {
+    max-width: 640px;
+    flex-direction: column;
+    align-items: center;
+  }
+}

@@ -1,0 +1,402 @@
+$colorLevelOne: rgb(43, 255, 107);
+$colorLevelTwo: rgb(128, 255, 43);
+$colorLevelThree: rgb(223, 255, 43);
+$colorLevelFour: rgb(255, 234, 43);
+$colorLevelFive: rgb(255, 163, 43);
+$colorLevelSix: rgb(255, 128, 43);
+
+
+.sprint-game-wrapper {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-image: url(../assets/img/england-flag.png);
+  background-position:center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.open-fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  margin-left: 0;
+  background-color: #ccc;
+}
+
+.sprint-game-header {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  padding-top: 5%;
+  margin: 0 auto;
+}
+
+.fullscreen {
+  width: 40px;
+  height: 40px;
+  border: 0;
+  outline: 0;
+  background-size: contain;
+  transition: 0.3s;
+  cursor: pointer;
+  font-size: 2.2rem;
+}
+
+.fullscreen:hover {
+  background-color: $colorPageMain;
+  border-radius: 0.40rem;
+  transition: 0.3s;
+}
+
+.sprint-game-close {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  outline: 0;
+  background-color: $colorPageMain;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 25px;
+}
+
+.sprint-game-close_span{
+  font-family: $textFont;
+  color: $colorFont;
+  font-size: 2rem;
+}
+
+.sprint-game-header-right{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sprint-game-select {
+  width: 100px;
+  height: 40px;
+  margin-right: 10px;
+  font-family: $textFont;
+  color: $colorFont;
+  font-size: 1.4rem;
+  background-color: $colorPageMain;
+  cursor: pointer;
+}
+
+.sprint-game-start-window {
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 60px;
+  width: 350px;
+  height: 315px;
+  padding-top: 20px;
+  border-radius: 0.25rem;
+  background-color: rgb(63, 63, 63, 0.9);
+
+  h2,
+  p {
+    color: #fff;
+  }
+
+  p {
+    font-family: $textFont;
+    font-size: 1.4rem;
+  }
+
+  .sprint-game-start-button {
+    font-family: $headerFont;
+    font-size: 2rem;
+    background-color: $colorPageMain;
+    border-radius: 0.25rem;
+    outline: none;
+    cursor: pointer;
+    border: none;
+  }
+
+}
+
+.game-out {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: $colorFont;
+  margin: 0;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  visibility: hidden;
+  opacity: 0;
+
+  .svg-inline--fa {
+    height: 2rem;
+    color:$colorPageMain;
+  }
+
+}
+
+.score-game {
+  width: 250px;
+  margin: 0 auto;
+  margin-top: 20px;
+  color: $colorLevelOne;
+}
+
+.game-content {
+  background-color: $colorPageMain;
+  justify-content: center;
+  text-align: center;
+  margin-top: 80px;
+  width: 600px;
+}
+
+.wrapper-img-win {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 200px;
+}
+
+.win {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.win:first-child {
+  visibility: visible;
+  opacity: 1;
+
+  .fa-trophy {
+    height: 1.5rem;
+    color: rgb(177, 139, 51);
+  }
+
+}
+
+.win:nth-child(2) {
+
+  .fa-trophy {
+    height: 2rem;
+    color: rgb(205, 127, 50)
+  }
+
+}
+
+.win:nth-child(3) {
+
+  .fa-trophy {
+    height: 2.5rem;
+    color: #c0c0c0;
+  }
+
+}
+
+.win:nth-child(4) {
+
+  .fa-trophy {
+    height: 3rem;
+    color: #ffd700;
+  }
+
+}
+
+.progress-game {
+  margin-bottom: 10px;
+  height: 75px;
+  background-color: antiquewhite;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper-dotted {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 3px;
+}
+
+.dotted {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: #3f3f3f 1px solid;
+  background-color: $colorPageMain;
+}
+
+.progress-game-text {
+  font-size: 18px;
+  margin-bottom: 5px;
+  font-family: $textFont;
+}
+
+.answer {
+  width: 100px;
+  height: 45px;
+  border-radius: 8px;
+  font-family: $textFont;
+  text-align: center;
+  font-size: 22px;
+  color: $colorFont;
+}
+
+.wrong-answer {
+  margin: 0;
+  background-color: red;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+.right-answer {
+  margin: 0;
+  background-color: green;
+  margin-bottom: 10px;
+}
+
+.game-word-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 150px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.word-game {
+  font-family: $headerFont;
+  font-size: 30px;
+}
+
+.word-translate {
+  font-family: $textFont;
+  font-size: 25px;
+}
+
+.timer-game {
+  position: absolute;
+  display: flex;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: $colorPageMain;
+  border: 2px solid $colorLevelOne;
+  color: $colorLevelOne;
+  font-family: $headerFont;
+  font-size: 50px;
+  align-items: center;
+  justify-content: center;
+  top: 15%;
+  left: 85%;
+}
+
+.wrapper-game {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+
+  .wrapper-arrows {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .arrows {
+    width: 100px;
+    text-align: center;
+    font-size: 40px;
+  }
+
+}
+
+.fullscreen-game {
+  width: 37px;
+  height: 37px;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  background-size: contain;
+  transition: 0.3s;
+  cursor: pointer;
+  font-size: 2.2rem;
+
+  .svg-inline--fa {
+    color: $colorFont;
+  }
+
+}
+
+.music-img {
+  margin-left: auto;
+  margin-right: 10px;
+  width: 37px;
+  height: 37px;
+  border-radius: 50%;
+  border: 1px $colorFont solid;
+  background: $colorPageMain;
+  cursor: pointer;
+
+  .svg-inline--fa {
+    height: 1.2rem;
+    color: $colorFont;
+  }
+
+}
+
+.game-out:hover,
+.music-img:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+.fullscreen-game:hover {
+  background-color: $colorPageMain;
+  border-radius: 0.40rem;
+  transition: 0.3s;
+}
+
+.game-sprint-modal-window {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(15, 15, 15, 0.379);
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.game-sprint-modal-content{
+  padding: 10px;
+  width: 400px;
+  height: auto;
+  background-color: #fff;
+  margin: 0 auto;
+  margin-top: 50px;
+  border-radius: 0.25rem;
+  padding-bottom: 10px;
+  max-height: 80vh;
+  overflow-y: scroll;
+}
+
+.modal-close-sprint {
+  margin-top: 10px;
+}
+
+.sprint-game-close_span:hover {
+  transition: 0.3ms;
+  color: #6B53FF;
+}
+
+@media (max-width: 800px) {
+  .timer-game {
+    top: 10%;
+    left: 75%;
+  }
+
+}

@@ -1,0 +1,76 @@
+.section-about-team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+
+  .about-team-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    justify-content: space-between;
+    gap: 15px;
+  }
+
+  img {
+    border-radius: 50%;
+  }
+
+  img:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+  }
+
+  .team-member {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .about-member-text {
+    max-width: 700px;
+    flex-grow: 1;
+  }
+
+  h3 {
+    font-family: $headerFont;
+    font-size: 25px;
+    width: 150px;
+  }
+
+  h4 {
+    font-family: $headerFont;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-family: $textFont;
+    font-size: 20px;
+  }
+
+  @media (max-width: 840px) {
+    .about-team-wrapper {
+      gap: 40px;
+    }
+
+    .team-member {
+      flex-direction: column;
+      text-align: center;
+      gap: 0px;
+    }
+    
+    h3 {
+      margin: 10px 0 0 0;
+    }
+
+    h4 {
+      font-family: $headerFont;
+      font-size: 20px;
+      margin: 10px 0 0 0;
+    }
+  }
+}
+

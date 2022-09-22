@@ -1,0 +1,167 @@
+.auth-popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(107, 83, 255, 0.4);
+  top: 0;
+  left: 0;
+  z-index: 105;
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .auth-popup-headers {
+    display: flex;
+   text-align: center;
+   box-shadow: 0px -5px 5px -5px rgba(34, 60, 80, 0.6) inset;
+   margin-bottom: 30px;
+  }
+
+  h3 {
+    margin: 0;
+    padding-bottom: 10px;
+    width: 50%;
+    font-family: $headerFont;
+    font-size: 25px;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  h3:focus {
+    transform: scale(1.1);
+    transition: 0.5s;
+  }
+
+  .header-active {
+    border-bottom: 3px solid $menuNav;
+    border-radius: 2px;
+    color: $menuNav;
+  }
+
+  .popup-input {
+    justify-self: center;
+    align-self: center;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    width: 300px;
+    font-size: 18px;
+    font-family: $textFont;
+  }
+
+  .popup-input.password {
+    margin-bottom: 10px;
+  }
+
+  .auth-popup-body {
+   width: 490px;
+   padding: 10px;
+    background: $menuItems;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  input[type=checkbox] {
+    display: none;
+  }
+
+  .pseudo-checkbox::before {
+    content: "\00A0";
+    display: inline-block;
+    box-sizing: border-box;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border: 2px solid $menuNav;
+    border-radius: 5px;
+    margin-right: 6px;
+    vertical-align: baseline;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    line-height: 16px;
+    color:$menuNav;
+  }
+
+  input[type=checkbox]:checked + .pseudo-checkbox::before {
+    content: "\2713";
+  }
+
+  input[type=checkbox]:checked + span {
+    font-weight: bold;
+  }
+
+  input::-webkit-input-placeholder {
+    color: $menuNav; 
+    font-style: italic; 
+  }
+
+  span {
+    font-family: $textFont;
+  }
+
+  label {
+    align-self: center;
+  }
+
+  input[type=email]:focus-visible,
+  input[type=password]:focus-visible,
+  input[type=text]:focus-visible {
+    outline-color:  $menuNav;
+  }
+
+  .error {
+    color: red;
+  }
+
+  .popup-buttons {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    display: flex;
+    align-self: center;
+    width: 300px;
+    justify-content: space-between;
+  }
+
+  .popup-button {
+    width: 90px;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px;
+    font-family: $headerFont;
+    font-size: 18px;
+    color: $colorFont;
+    background: rgb(107, 83, 255, 0.4);
+    cursor: pointer;
+  }
+
+  .popup-button:active {
+    transform: scale(1.1);
+    transition: 0.5s;
+  }
+
+  .popup-button:disabled {
+    cursor: default;
+    transform: none;
+    background: $colorPageMain;
+  }
+
+  #name {
+    display: none;
+  }
+
+}
+
+.message {
+  display: none;
+  align-self: center;
+  margin-top: 10px;
+  font-size: 18px;
+  font-family: $textFont;
+  color: red;
+}

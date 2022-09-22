@@ -1,0 +1,25 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-size: 40px;
+  font-family: $headerFont;
+  width: 95%;
+
+  .authorization {
+    width: 40px;
+    cursor: pointer;
+  }
+
+  .name-page {
+    margin-left: 40px;
+    border-bottom: $colorFont solid 4px;
+    border-radius: 5px;
+  }
+
+  .name-user {
+    font-size: 20px;
+  }
+}
+
+
